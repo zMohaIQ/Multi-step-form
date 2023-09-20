@@ -1,0 +1,87 @@
+@import "../index.scss";
+
+.sidebar {
+  position: relative;
+
+  @media (max-width: 600px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .sidebar-wrapper {
+    position: relative;
+    display: flex;
+
+    img {
+      @media (max-width: 600px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 35%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      color: $White;
+
+       @media (max-width: 600px) {
+          top: 50%;
+          left: 50%;
+        }
+
+      .form {
+        text-transform: uppercase;
+        @media (max-width: 600px) {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          align-items: center;
+        }
+        &__card {
+          margin-bottom: 2rem;
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+        }
+
+        .number {
+          padding: 0.8rem;
+          border-radius: 50%;
+          border: 1px solid white;
+          font-weight: bold;
+          @media (max-width: 600px) {
+            display: flex;
+          }
+        }
+
+        .span {
+          font-size: 12px;
+          color: $Pastel-blue;
+          @media (max-width: 600px) {
+            display: none;
+          }
+        }
+
+        .select {
+          font-weight: 500;
+          font-size: 14px;
+          letter-spacing: 2px;
+          @media (max-width: 600px) {
+            display: none;
+          }
+        }
+
+        .active {
+          color: black;
+          background-color: $Light-blue;
+          border: 1px solid $Light-blue;
+        }
+      }
+    }
+  }
+}

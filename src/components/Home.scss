@@ -1,0 +1,68 @@
+@import "../index.scss";
+
+.home {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 2rem;
+  background-color: white;
+  border-radius: 20px;
+
+  .personal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+    @media (max-width: 600px) {
+      z-index: 100;
+      background-color: $White;
+      border-radius: 1rem;
+    }
+    .content {
+      h1 {
+        color: $Marine-blue;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        color: $Cool-gray;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        color: $Marine-blue;
+        font-weight: 500;
+        margin-bottom: 0.4rem;
+      }
+
+      input {
+        padding: 0.7rem 0.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid $Light-gray;
+        margin-bottom: 1rem;
+      }
+    }
+
+    button {
+      padding: 0.8rem 1.4rem;
+      border-radius: 0.5rem;
+      background-color: $Marine-blue;
+      border: 1px solid $Marine-blue;
+      color: $White;
+      cursor: pointer;
+      font-weight: 500;
+      margin-left: auto;
+
+      &:hover {
+        background-color: hsl(213, 97%, 25%);
+        border: 1px solid hsl(213, 97%, 25%);
+      }
+    }
+  }
+}
